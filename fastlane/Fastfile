@@ -50,6 +50,9 @@ platform :ios do
       xcodeproj: "#{GITHUB_WORKSPACE}/Loop/Loop.xcodeproj",
       build_number: current_build_number
     )      
+
+    ENV["MATCH_READONLY"] = false.to_s  # Add this line
+
     
     match(
       type: "appstore",
