@@ -180,7 +180,7 @@ platform :ios do
 
     def configure_bundle_id(name, identifier, capabilities)
       begin
-        bundle_id = Spaceship::ConnectAPI::BundleId.find(identifier) || Spaceship::ConnectAPI::BundleId.create(name: name, identifier: identifier)
+        bundle_id = Spaceship::ConnectAPI::BundleId.find(identifier) || Spaceship::ConnectAPI::BundleId.create(name: name, identifier: identifier, platform: "IOS")
         
         capabilities.each do |capability|
           puts "Processing capability: #{capability}"
